@@ -1,0 +1,15 @@
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\bin\Debug\XAML_Basic.exe.config
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\bin\Debug\XAML_Basic.exe
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\bin\Debug\XAML_Basic.pdb
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.csprojAssemblyReference.cache
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\MainWindow.g.cs
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\App.g.cs
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic_MarkupCompile.cache
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic_MarkupCompile.lref
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\MainWindow.baml
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.g.resources
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.Properties.Resources.resources
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.csproj.GenerateResource.cache
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.csproj.CoreCompileInputs.cache
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.exe
+D:\CSharp\BitExpert_WPF\200326\XAML_Basic\XAML_Basic\obj\Debug\XAML_Basic.pdb
