@@ -1,0 +1,19 @@
+﻿<Window x:Class="Simple_Stack.Boader_Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simple_Stack"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Border Margin="5" Padding="5" Background="LightYellow"
+ BorderBrush="SteelBlue" BorderThickness="3,5,3,5" CornerRadius="3"
+ VerticalAlignment="Top">
+        <StackPanel>
+            <Button Margin="3">One</Button>
+            <Button Margin="3">Two</Button>
+            <Button Margin="3">Three</Button>
+        </StackPanel>
+    </Border>
+
+</Window>
