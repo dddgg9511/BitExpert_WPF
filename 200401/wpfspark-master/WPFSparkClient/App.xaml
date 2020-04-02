@@ -1,0 +1,19 @@
+﻿<Application x:Class="WPFSparkClient.NET46.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFSparkClient"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WPFSpark;component/Themes/ToggleSwitch.Generic.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/WPFSparkClient;component/Resources/Styles/IconGlyphVectors.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/WPFSparkClient;component/Resources/Styles/SplitViewStyles.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        <local:DateConverter x:Key="dateConverter"></local:DateConverter>
+        <local:Employee x:Key="Employee" x:Name="Emp"></local:Employee>
+        <local:stringConverter x:Key="stringConvert" x:Name="string_conv"></local:stringConverter>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

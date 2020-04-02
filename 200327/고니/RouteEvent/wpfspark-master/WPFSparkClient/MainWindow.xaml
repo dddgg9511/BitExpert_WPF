@@ -346,177 +346,7 @@
               Margin="0,15,0,0"
               Background="White"
               TextBlock.FontSize="14"
-              Visibility="{Binding CurrentAppMode, Converter={StaticResource ContentVisibilityHelper}, ConverterParameter=SparkWindow}">
-            <Button Height="30"
-                    Width="150"
-                    Content="Launch SparkWindow"
-                    Click="LaunchSparkWindow"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"></Button>
-        </Grid>
-        <Grid x:Name="FluidPivotPanelGrid"
-              Grid.Row="1"
-              Grid.Column="1"
-              Margin="0,15,0,0"
-              TextBlock.FontSize="14"
-              Visibility="{Binding CurrentAppMode, Converter={StaticResource ContentVisibilityHelper}, ConverterParameter=FluidPivotPanel}"
-              Background="Black">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-            </Grid.RowDefinitions>
-            <wpfspark:PivotPanel x:Name="RootPivotPanel"
-                                 HeaderHeight="70"
-                                 HorizontalAlignment="Stretch"></wpfspark:PivotPanel>
-            <Button Width="100"
-                    Grid.Row="1"
-                    Height="28"
-                    Content="Reset"
-                    FontSize="14"
-                    VerticalContentAlignment="Center"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="OnResetFluidPivotPanel"></Button>
-        </Grid>
-        <Grid x:Name="FluidProgressBarGrid"
-              Grid.Row="1"
-              Grid.Column="1"
-              Margin="0,15,0,0"
-              Background="Black"
-              TextBlock.FontSize="14"
-              Visibility="{Binding CurrentAppMode, Converter={StaticResource ContentVisibilityHelper}, ConverterParameter=FluidProgressBar}">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Border Grid.Row="0"
-                    BorderBrush="White"
-                    BorderThickness="0,0,0,2"
-                    Background="Transparent">
-                <wpfspark:FluidProgressBar x:Name="ProgressBarA"
-                                           HorizontalAlignment="Stretch"
-                                           VerticalAlignment="Stretch"
-                                           Foreground="Orange"
-                                           DotWidth="6"
-                                           DotHeight="6"
-                                           DotRadiusX="0"
-                                           DotRadiusY="0"
-                                           Oscillate="False"
-                                           TotalDuration="00:00:03.25"
-                                           ReverseDuration="00:00:02.15"
-                                           KeyFrameA="0.3"
-                                           KeyFrameB="0.6"
-                                           DurationA="00:00:00.25"
-                                           DurationB="00:00:01.25"
-                                           DurationC="00:00:00.25"
-                                           Delay="00:00:00.095"></wpfspark:FluidProgressBar>
-            </Border>
-
-            <TextBlock Grid.Row="0"
-                       FontFamily="Arial"
-                       Foreground="White"
-                       Text="Oscillate = False"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top"
-                       FontSize="14"
-                       Margin="10,10"></TextBlock>
-
-            <wpfspark:FluidProgressBar x:Name="ProgressBarB"
-                                       Grid.Row="1"
-                                       HorizontalAlignment="Stretch"
-                                       VerticalAlignment="Stretch"
-                                       Foreground="Cyan"
-                                       DotWidth="6"
-                                       DotHeight="6"
-                                       DotRadiusX="0"
-                                       DotRadiusY="0"
-                                       Oscillate="True"
-                                       TotalDuration="00:00:03.25"
-                                       ReverseDuration="00:00:02.30"
-                                       KeyFrameA="0.3"
-                                       KeyFrameB="0.6"
-                                       DurationA="00:00:00.25"
-                                       DurationB="00:00:01.25"
-                                       DurationC="00:00:00.25"
-                                       Delay="00:00:00.095">
-            </wpfspark:FluidProgressBar>
-
-            <TextBlock Grid.Row="1"
-                       FontFamily="Arial"
-                       Foreground="White"
-                       Text="Oscillate = True"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top"
-                       FontSize="14"
-                       Margin="10,10"></TextBlock>
-        </Grid>
-        <Grid x:Name="FluidStatusBarGrid"
-              Grid.Row="1"
-              Grid.Column="1"
-              Margin="0,15,0,0"
-              Background="Black"
-              TextBlock.FontSize="14"
-              Visibility="{Binding CurrentAppMode, Converter={StaticResource ContentVisibilityHelper}, ConverterParameter=FluidStatusBar}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <wpfspark:FluidStatusBar Grid.Row="0"
-                                     x:Name="customStatusBar"
-                                     HorizontalAlignment="Stretch"
-                                     VerticalAlignment="Stretch"
-                                     FadeOutDirection="Up"
-                                     FadeOutDistance="300"
-                                     FadeOutDuration="00:00:00.75"
-                                     MoveDuration="00:00:00.3"
-                                     Foreground="Orange"
-                                     Background="Transparent"
-                                     FontWeight="Light"
-                                     SyncLatest="{Binding Path=IsChecked, ElementName=SyncLatestCB}"
-                                     FontSize="20"></wpfspark:FluidStatusBar>
-
-            <StackPanel Grid.Row="1"
-                        Orientation="Horizontal">
-                <TextBlock Foreground="White"
-                           Text="Direction: "
-                           Margin="20,0,0,0"
-                           VerticalAlignment="Center"></TextBlock>
-                <ComboBox Name="DirectionCB"
-                          SelectionChanged="DirectionCB_SelectionChanged"
-                          Width="100"
-                          Height="24"
-                          Margin="5,0"
-                          VerticalAlignment="Center"
-                          IsEditable="False">
-                    <ComboBoxItem IsSelected="True">Left</ComboBoxItem>
-                    <ComboBoxItem>Right</ComboBoxItem>
-                    <ComboBoxItem>Up</ComboBoxItem>
-                    <ComboBoxItem>Down</ComboBoxItem>
-                </ComboBox>
-                <CheckBox x:Name="SyncLatestCB"
-                          Content="Sync Latest"
-                          Foreground="White"
-                          IsChecked="True"
-                          Margin="20,5,-20,0"
-                          VerticalAlignment="Center"></CheckBox>
-
-                <Button Name="StartBtn"
-                        Width="100"
-                        Height="30"
-                        Content="Start"
-                        Click="StartBtn_Click"
-                        Margin="80,0,5,0">
-                </Button>
-                <Button Name="StopBtn"
-                        Width="100"
-                        Height="30"
-                        Content="Stop"
-                        Click="StopBtn_Click"
-                        Margin="20,0,5,0">
-                </Button>
-            </StackPanel>
-        </Grid>
+              Visibility="{Binding CurrentAppMode, Converter={StaticResource ContentVisibilityHelper}, ConverterParameter=SparkWindow}"/>
 
         <Grid x:Name="SplitViewMenu"
               ZIndex="4"
@@ -543,7 +373,15 @@
                              Unchecked="OnHideSprocketControl"
                              BorderThickness="0"
                              Tag="SprocketControl.Glyph"
-                             ToolTip="SprocketControl">
+                             ToolTip="SprocketControl" RenderTransformOrigin="0.5,0.5">
+                    <RadioButton.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-51.755"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </RadioButton.RenderTransform>
                 </RadioButton>
 
                 <!-- ToggleSwitch button -->

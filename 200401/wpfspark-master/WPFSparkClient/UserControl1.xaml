@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="WPFSparkClient.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFSparkClient"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+ 
+    <Grid x:Name="data" DataContext="{DynamicResource Employee}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" VerticalAlignment="Center" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="5">Employee ID</Label>
+            <TextBox TextAlignment="Center" VerticalContentAlignment="Center" x:Name="emp_id" Grid.Column="1" Margin="5" MinWidth="200" Width="auto" ></TextBox>
+            <RadioButton Grid.Column="2" x:Name="InquireEmployee"
+                             Content="Get Employee"
+                             Style="{StaticResource SplitViewNavButtonStyle}"
+                             Foreground="Black"
+                             Click="Button_Click"
+                             BorderThickness="0"
+                             ToolTip="ToggleSwitch"
+                             Tag="SparkWindow.Glyph"></RadioButton>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Background="#FF222222" OpacityMask="#FF707070">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Label Foreground="White" HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="5">First Name</Label>
+                <TextBox  TextAlignment="Center" VerticalContentAlignment="Center"  Grid.Column="1" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=First_name}"></TextBox>
+                <TextBlock Foreground="White" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Margin="5">Last Name</TextBlock>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center"  Grid.Column="3" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Last_name}"></TextBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="5">Email</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Email}"></TextBox>
+                <Label HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Margin="5">Phone Number</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Phone_number}"></TextBox>
+            </Grid>
+            <Grid Background="#FF222222" OpacityMask="#FF707070" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Foreground="White" HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="5">Hire Date</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Hire_date, Converter={StaticResource dateConverter}}"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Margin="5">Job ID</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Job_id}"></TextBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="5">Salary</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Salary}"></TextBox>
+                <Label HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Margin="5">Commission PCT</Label>
+                <TextBox TextAlignment="Center"  VerticalContentAlignment="Center" Grid.Column="3" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Commission}"></TextBox>
+            </Grid>
+            <Grid Background="#FF222222" OpacityMask="#FF707070" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Foreground="White" HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="5">Manager</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Manager_ID}"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Margin="5">Department ID</Label>
+                <TextBox TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" Margin="5" MinWidth="200" Width="auto" IsReadOnly="True" Text="{Binding Path=Department_ID}"></TextBox>
+            </Grid>
+        </Grid>
+        <DockPanel Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <Button Width="100" Height="20" Margin="5">확인</Button>
+        </DockPanel>
+    </Grid>
+</UserControl>
